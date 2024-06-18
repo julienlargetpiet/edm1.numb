@@ -1,0 +1,547 @@
+
+<!DOCTYPE html><html><head><title>R: can_be_num</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>can_be_num</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>can_be_num</h2>
+
+<h3>Description</h3>
+
+<p>Return TRUE if a variable can be converted to a number and FALSE if not (supports float)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>can_be_num(x)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="x">x</code></td>
+<td>
+<p>is the input value</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>
+print(can_be_num("34.677"))
+
+#[1] TRUE
+
+print(can_be_num("34"))
+
+#[1] TRUE
+
+print(can_be_num("3rt4"))
+
+#[1] FALSE
+
+print(can_be_num(34))
+
+#[1] TRUE
+
+</code></pre>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: dcr_untl</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>dcr_untl</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>dcr_untl</h2>
+
+<h3>Description</h3>
+
+<p>Allow to get the final value of a incremental or decremental loop.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>dcr_untl(strt_val, cr_val, stop_val = 0)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="strt_val">strt_val</code></td>
+<td>
+<p>is the start value</p>
+</td></tr>
+<tr><td><code id="cr_val">cr_val</code></td>
+<td>
+<p>is the incremental (or decremental value)</p>
+</td></tr>
+<tr><td><code id="stop_val">stop_val</code></td>
+<td>
+<p>is the value where the loop has to stop</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>
+print(dcr_untl(strt_val=50, cr_val=-5, stop_val=5))
+
+#[1] 9
+
+print(dcr_untl(strt_val=50, cr_val=5, stop_val=450))
+
+#[1] 80
+
+</code></pre>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: dcr_val</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>dcr_val</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>dcr_val</h2>
+
+<h3>Description</h3>
+
+<p>Allow to get the end value after an incremental (or decremental loop)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>dcr_val(strt_val, cr_val, stop_val = 0)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="strt_val">strt_val</code></td>
+<td>
+<p>is the start value</p>
+</td></tr>
+<tr><td><code id="cr_val">cr_val</code></td>
+<td>
+<p>is the incremental or decremental value</p>
+</td></tr>
+<tr><td><code id="stop_val">stop_val</code></td>
+<td>
+<p>is the value the loop has to stop</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>
+print(dcr_val(strt_val=50, cr_val=-5, stop_val=5))
+
+#[1] 5
+
+print(dcr_val(strt_val=47, cr_val=-5, stop_val=5))
+
+#[1] 7
+
+print(dcr_val(strt_val=50, cr_val=5, stop_val=450))
+
+#[1] 450
+
+print(dcr_val(strt_val=53, cr_val=5, stop_val=450))
+
+#[1] 448
+
+</code></pre>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: is_divisible</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>is_divisible</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>is_divisible</h2>
+
+<h3>Description</h3>
+
+<p>Takes a vector as an input and returns all the elements that are divisible by all choosen numbers from another vector.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>is_divisible(inpt_v = c(), divisible_v = c())
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="inpt_v">inpt_v</code></td>
+<td>
+<p>is the input vector</p>
+</td></tr>
+<tr><td><code id="divisible_v">divisible_v</code></td>
+<td>
+<p>is the vector containing all the numbers that will try to divide those contained in inpt_v</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>
+ print(is_divisible(inpt_v=c(1:111), divisible_v=c(2, 4, 5)))
+
+ #[1]  20  40  60  80 100
+
+</code></pre>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: isnt_divisible</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>isnt_divisible</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>isnt_divisible</h2>
+
+<h3>Description</h3>
+
+<p>Takes a vector as an input and returns all the elements that are not divisible by all choosen numbers from another vector.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>isnt_divisible(inpt_v = c(), divisible_v = c())
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="inpt_v">inpt_v</code></td>
+<td>
+<p>is the input vector</p>
+</td></tr>
+<tr><td><code id="divisible_v">divisible_v</code></td>
+<td>
+<p>is the vector containing all the numbers that will try to divide those contained in inpt_v</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>
+ print(isnt_divisible(inpt_v=c(1:111), divisible_v=c(2, 4, 5)))
+
+# [1]   1   3   7   9  11  13  17  19  21  23  27  29  31  33  37  39  41  43  47
+#[20]  49  51  53  57  59  61  63  67  69  71  73  77  79  81  83  87  89  91  93
+#[39]  97  99 101 103 107 109 111
+
+</code></pre>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: letter_to_nb</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>letter_to_nb</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>letter_to_nb</h2>
+
+<h3>Description</h3>
+
+<p>Allow to get the number of a spreadsheet based column by the letter ex: AAA = 703
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>letter_to_nb(letter)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="letter">letter</code></td>
+<td>
+<p>is the letter (name of the column)</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>
+print(letter_to_nb("rty"))
+
+#[1] 12713
+
+</code></pre>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: nb_to_letter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>nb_to_letter</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>nb_to_letter</h2>
+
+<h3>Description</h3>
+
+<p>Allow to get the letter of a spreadsheet based column by the number ex: 703 = AAA
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>nb_to_letter(x)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="x">x</code></td>
+<td>
+<p>is the number of the column</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>
+print(nb_to_letter(5))
+
+[1] "e"
+
+print(nb_to_letter(27))
+
+[1] "aa"
+
+print(nb_to_letter(51))
+
+[1] "ay"
+
+print(nb_to_letter(52))
+
+[1] "az"
+
+print(nb_to_letter(53))
+
+[1] "ba"
+
+print(nb_to_letter(675))
+
+[1] "yy"
+
+print(nb_to_letter(676))
+
+[1] "yz"
+
+print(nb_to_letter(677))
+
+[1] "za"
+
+print(nb_to_letter(702))
+
+[1] "zz"
+
+print(nb_to_letter(703))
+
+[1] "aaa"
+
+print(nb_to_letter(18211))
+
+[1] "zxk"
+
+print(nb_to_letter(18277))
+
+[1] "zzy"
+
+print(nb_to_letter(18278))
+
+[1] "zzz"
+
+print(nb_to_letter(18279))
+
+[1] "aaaa"
+
+</code></pre>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: power_to_char</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>power_to_char</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>power_to_char</h2>
+
+<h3>Description</h3>
+
+<p>Convert a scientific number to a string representing normally the number.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>power_to_char(inpt_v = c())
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="inpt_v">inpt_v</code></td>
+<td>
+<p>is the input vector containing scientific number, but also other elements that won't be taken in count</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>
+print(power_to_char(inpt_v = c(22 * 10000000, 12, 9 * 0.0000002)))
+
+[1] "2200000000" "12"         "0.0000018" 
+
+</code></pre>
+
+</main>
+
+</div>
+</body></html>

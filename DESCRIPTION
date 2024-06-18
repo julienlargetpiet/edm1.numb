@@ -1,0 +1,13 @@
+Package: edm1.numb
+Title: Provides set of functions to test and modify the characteristics of a number
+Version: 2.0.0.0
+Authors@R: 
+    person("Julien", "Larget-Piet", , "julien.larget-piet@dreamRs.fr", role = c("aut", "cre"))
+Description: This packages provides functions to get if a character can be converted to a number, generate column name from a number or the opposite (according to the spreadsheet column name nomenclature), convert a scientific number to a normal number as a character...
+License: GPL (==3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports:
+    stringr,
+    stringi
